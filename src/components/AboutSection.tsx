@@ -8,14 +8,28 @@ const WHATSAPP_URL =
 
 const AboutSection = () => (
   <section className="py-24 md:py-32 bg-background">
-    <div className="max-w-5xl mx-auto px-6">
-      <div className="flex flex-col md:flex-row md:items-start gap-10 md:gap-12 lg:gap-16">
+    <div className="max-w-4xl mx-auto px-6">
+      <div className="grid md:grid-cols-2 gap-16 items-center">
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
+          initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex-1 min-w-0"
+        >
+          <div className="w-full aspect-[3/4] rounded-3xl bg-accent overflow-hidden">
+            <img
+              src={aboutPhoto}
+              alt="Daniela Barocela, terapeuta en Medicina Tradicional China, en un entorno natural al aire libre."
+              className="w-full h-full object-cover object-[48%_42%]"
+            />
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
           <p className="font-body text-sm tracking-[0.2em] uppercase text-muted-foreground mb-4">
             Sobre mí
@@ -31,7 +45,7 @@ const AboutSection = () => (
             <p>
               Mi manera de trabajar integra lo corporal y lo emocional. Creo que los síntomas
               son mensajes, y que cuando les damos espacio, el cuerpo encuentra su camino de vuelta al equilibrio.
-              También estoy formada en Compassionate Inquiry, un enfoque psicoterapéutico informado en trauma y que trabaja desde la compasión.  
+              También estoy formada en Compassionate Inquiry, un enfoque psicoterapéutico informado en trauma y que trabaja desde la compasión.
             </p>
             <p>
               Acompaño con presencia, sin juicio, con respeto por tus tiempos y tus procesos.
@@ -55,22 +69,6 @@ const AboutSection = () => (
               </a>
             </Button>
           </motion.div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="shrink-0 w-full max-w-[220px] sm:max-w-[260px] mx-auto md:mx-0 md:pt-2"
-        >
-          <div className="aspect-[3/4] rounded-2xl bg-accent overflow-hidden shadow-sm">
-            <img
-              src={aboutPhoto}
-              alt="Daniela Barocela, terapeuta en Medicina Tradicional China, en un entorno natural al aire libre."
-              className="w-full h-full object-cover object-[48%_42%]"
-            />
-          </div>
         </motion.div>
       </div>
     </div>
