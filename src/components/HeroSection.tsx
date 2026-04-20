@@ -16,13 +16,9 @@ const HeroSection = () => (
         height={1080}
         className="w-full h-full object-cover"
       />
-      {/* Capa rubí + acento dorado sobre la misma foto */}
+      {/* Velo sutil bordó → acento dorado → bordó oscuro (la foto sigue visible) */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-rose-950/80 via-amber-900/25 to-[#1f070d]/92"
-        aria-hidden
-      />
-      <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_90%_55%_at_50%_35%,rgba(212,175,55,0.22),transparent_65%)] mix-blend-soft-light"
+        className="absolute inset-0 bg-gradient-to-b from-[#3d1a22]/38 via-amber-900/10 to-[#1a0a0e]/58"
         aria-hidden
       />
     </div>
@@ -31,7 +27,7 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="font-body text-sm tracking-[0.25em] uppercase text-amber-200/90 mb-6 drop-shadow-[0_1px_6px_rgba(0,0,0,0.45)]"
+        className="font-body text-sm tracking-[0.25em] uppercase text-amber-100/75 mb-6 drop-shadow-[0_1px_3px_rgba(0,0,0,0.35)]"
       >
         Acompañamiento integral cuerpo–emoción
       </motion.p>
@@ -39,7 +35,7 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="font-heading text-4xl md:text-6xl lg:text-7xl font-semibold text-cream leading-tight mb-8 text-balance drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]"
+        className="font-heading text-4xl md:text-6xl lg:text-7xl font-semibold text-cream leading-tight mb-8 text-balance drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)]"
       >
         Tu cuerpo no está fallando, te está hablando
       </motion.h1>
@@ -47,7 +43,7 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="font-body text-lg md:text-xl text-cream/85 max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]"
+        className="font-body text-lg md:text-xl text-cream/80 max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]"
       >
          Te acompaño a entender qué hay detrás de lo que sentís y a aliviarlo desde la raíz a través de la Medicina Tradicional China y la escucha terapéutica.
       </motion.p>
@@ -60,7 +56,7 @@ const HeroSection = () => (
         <Button
           variant="heroOutline"
           size="lg"
-          className="border-amber-400/90 text-amber-50 hover:bg-rose-950/50 hover:border-amber-300 hover:text-cream"
+          className="border-amber-400/45 text-cream/95 hover:bg-[#2a1018]/35 hover:border-amber-400/55 hover:text-cream"
           asChild
         >
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
