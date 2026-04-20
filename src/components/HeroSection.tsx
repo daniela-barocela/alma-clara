@@ -22,49 +22,51 @@ const HeroSection = () => (
         aria-hidden
       />
     </div>
-    <div className="relative z-10 max-w-3xl mx-auto px-6 text-center py-32">
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="font-body text-sm tracking-[0.25em] uppercase text-amber-100/75 mb-6 drop-shadow-[0_1px_3px_rgba(0,0,0,0.35)]"
-      >
-        Acompañamiento integral cuerpo–emoción
-      </motion.p>
-      <motion.h1
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="font-heading text-4xl md:text-6xl lg:text-7xl font-semibold text-cream leading-tight mb-8 text-balance drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)]"
-      >
-        Tu cuerpo no está fallando, te está hablando
-      </motion.h1>
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        className="font-body text-lg md:text-xl text-cream/80 max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]"
-      >
-         Te acompaño a entender qué hay detrás de lo que sentís y a aliviarlo desde la raíz a través de la Medicina Tradicional China y la escucha terapéutica.
-      </motion.p>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.6 }}
-        className="flex flex-col sm:flex-row gap-4 justify-center"
-      >
-        <Button
-          variant="heroOutline"
-          size="lg"
-          className="border-amber-400/45 text-cream/95 hover:bg-[#2a1018]/35 hover:border-amber-400/55 hover:text-cream"
-          asChild
+    <div className="relative z-10 max-w-3xl mx-auto px-6 py-32">
+      <div className="text-center rounded-3xl bg-cream/88 px-6 py-10 md:px-12 md:py-12 shadow-[0_8px_40px_rgba(45,18,24,0.12)] backdrop-blur-sm ring-1 ring-[#3d1a22]/10">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="font-body text-sm tracking-[0.25em] uppercase text-[#722f37] mb-6"
         >
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-            <MessageCircle className="mr-2 h-5 w-5" />
-            Escribime por WhatsApp
-          </a>
-        </Button>
-      </motion.div>
+          Acompañamiento integral cuerpo–emoción
+        </motion.p>
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="font-heading text-4xl md:text-6xl lg:text-7xl font-semibold text-[#2d1218] leading-tight mb-8 text-balance"
+        >
+          Tu cuerpo no está fallando, te está hablando
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="font-body text-lg md:text-xl text-[#4a2430] max-w-2xl mx-auto mb-10 leading-relaxed"
+        >
+          Te acompaño a entender qué hay detrás de lo que sentís y a aliviarlo desde la raíz a través de la Medicina Tradicional China y la escucha terapéutica.
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <Button
+            variant="heroOutline"
+            size="lg"
+            className="border-[#5c2a38] text-[#2d1218] hover:bg-[#3d1a22] hover:border-[#3d1a22] hover:text-cream"
+            asChild
+          >
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Escribime por WhatsApp
+            </a>
+          </Button>
+        </motion.div>
+      </div>
     </div>
   </section>
 );
