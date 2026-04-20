@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-nature.jpg";
+import SiteLogo from "@/components/SiteLogo";
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 
@@ -14,13 +15,22 @@ const HeroSection = () => (
         alt="Paisaje natural sereno"
         width={1920}
         height={1080}
-        className="w-full h-full object-cover"
+        className="h-full w-full object-cover"
       />
       {/* Velo sutil bordó → acento dorado → bordó oscuro (la foto sigue visible) */}
       <div
         className="absolute inset-0 bg-gradient-to-b from-[#3d1a22]/38 via-amber-900/10 to-[#1a0a0e]/58"
         aria-hidden
       />
+      {/* Marca tipográfica integrada en la escena (vector, sin imagen) */}
+      <motion.div
+        className="absolute top-1 left-1 z-[5] sm:top-2 sm:left-2"
+        initial={{ opacity: 0, y: -4 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <SiteLogo variant="hero" />
+      </motion.div>
     </div>
     <div className="relative z-10 max-w-3xl mx-auto px-6 text-center py-32">
       <motion.p
