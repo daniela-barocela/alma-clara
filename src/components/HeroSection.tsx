@@ -53,9 +53,17 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="font-body text-lg md:text-xl text-white max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]"
+        className="font-body text-lg md:text-xl text-white max-w-2xl mx-auto mb-4 leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]"
       >
         Desde la Medicina tradicional china te acompaño a regular y entender qué hay detrás de lo que sentís y aliviarlo desde la raíz.
+      </motion.p>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+        className="font-body text-base md:text-lg text-white max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]"
+      >
+        Atención en Unquillo, Córdoba.
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
